@@ -1,0 +1,201 @@
+mode,season,route_id,route_name,dir_id,day_type_id,day_type_name,time_period_id,time_period_name,stop_name,parent_station,total_ons,total_offs,number_service_days,average_ons,average_offs,average_flow,ObjectId
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_06,PM_PEAK,Forest Hills,place-forhl,70602,0,60,1177,0,1177,320
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_02,EARLY_AM,Alewife,place-alfcl,17455,0,49,356,0,356,1169
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_02,Saturday,time_period_10,OFF_PEAK,Ashmont,place-asmnl,34473,0,10,3447,0,3447,908
+Heavy Rail,Fall 2024,Blue,Blue Line,WB,day_type_01,Weekday,time_period_01,VERY_EARLY_MORNING,Government Center,place-gover,134,39947,75,2,533,117,87
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_02,Saturday,time_period_10,OFF_PEAK,Savin Hill,place-shmnl,9403,1848,10,940,185,6456,937
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_09,NIGHT,Forest Hills,place-forhl,0,7771,60,0,130,0,459
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_02,Saturday,time_period_10,OFF_PEAK,Charles/MGH,place-chmnl,15789,21240,10,1579,2124,20976,1051
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_03,AM_PEAK,Downtown Crossing,place-dwnxg,38395,102054,60,640,1701,5039,679
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_06,PM_PEAK,Malden Center,place-mlmnl,1271,143540,60,21,2392,1825,324
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_03,AM_PEAK,Haymarket,place-haecl,3918,31289,60,65,521,2113,362
+Heavy Rail,Fall 2024,Blue,Blue Line,EB,day_type_01,Weekday,time_period_06,PM_PEAK,Wonderland,place-wondl,0,126065,75,0,1681,0,221
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_03,AM_PEAK,Jackson Square,place-jaksn,5571,12620,60,93,210,656,683
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_08,LATE_EVENING,Central,place-cntsq,14401,5091,49,294,104,995,957
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_03,AM_PEAK,Quincy Adams,place-qamnl,22220,182,49,453,4,1041,715
+Heavy Rail,Fall 2024,Blue,Blue Line,EB,day_type_01,Weekday,time_period_08,LATE_EVENING,Suffolk Downs,place-sdmnl,334,5370,75,4,72,1318,244
+Heavy Rail,Fall 2024,Blue,Blue Line,WB,day_type_01,Weekday,time_period_04,MIDDAY_BASE,Beachmont,place-bmmnl,49930,4740,75,666,63,2513,171
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_01,VERY_EARLY_MORNING,Massachusetts Avenue,place-masta,1753,1397,60,29,23,419,275
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_03,AM_PEAK,Back Bay,place-bbsta,8939,110557,60,149,1843,2072,676
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_07,EVENING,Savin Hill,place-shmnl,4414,1939,49,90,40,750,860
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_02,EARLY_AM,Oak Grove,place-ogmnl,25224,0,60,420,0,420,667
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_09,NIGHT,Downtown Crossing,place-dwnxg,4638,2707,49,95,55,376,998
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_01,VERY_EARLY_MORNING,Back Bay,place-bbsta,2646,3672,60,44,61,380,266
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_07,EVENING,Park Street,place-pktrm,99919,57404,49,2039,1172,4284,851
+Heavy Rail,Fall 2024,Blue,Blue Line,WB,day_type_01,Weekday,time_period_06,PM_PEAK,Revere Beach,place-rbmnl,25331,1158,75,338,15,871,200
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_02,Saturday,time_period_10,OFF_PEAK,Porter,place-portr,3540,36214,10,354,3621,8417,931
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_02,EARLY_AM,Oak Grove,place-ogmnl,0,1796,60,0,30,0,297
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_03,AM_PEAK,Roxbury Crossing,place-rcmnl,29316,20619,60,489,344,4564,368
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_02,EARLY_AM,Roxbury Crossing,place-rcmnl,796,6317,60,13,105,223,668
+Heavy Rail,Fall 2024,Blue,Blue Line,WB,day_type_01,Weekday,time_period_04,MIDDAY_BASE,Airport,place-aport,106701,22741,75,1423,303,4985,169
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_07,EVENING,Massachusetts Avenue,place-masta,20718,9061,60,345,151,2329,345
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_08,LATE_EVENING,Ruggles,place-rugg,7022,12102,60,117,202,1152,448
+Heavy Rail,Fall 2024,Blue,Blue Line,EB,day_type_02,Saturday,time_period_10,OFF_PEAK,Airport,place-aport,24257,62560,16,1516,3910,12214,59
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_02,EARLY_AM,Sullivan Square,place-sull,17985,3700,60,300,62,1497,672
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_06,PM_PEAK,Sullivan Square,place-sull,14831,55958,60,247,933,6168,332
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_09,NIGHT,Roxbury Crossing,place-rcmnl,552,1900,60,9,32,235,619
+Heavy Rail,Fall 2024,Blue,Blue Line,EB,day_type_01,Weekday,time_period_02,EARLY_AM,Wood Island,place-wimnl,546,3545,74,7,48,144,24
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_03,AM_PEAK,Wollaston,place-wlsta,1567,1938,49,32,40,369,812
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_02,EARLY_AM,Andrew,place-andrw,8801,2921,49,180,60,2005,478
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_02,EARLY_AM,Green Street,place-grnst,5691,301,60,95,5,769,291
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_07,EVENING,Oak Grove,place-ogmnl,11991,0,60,200,0,200,426
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_09,NIGHT,South Station,place-sstat,4031,1063,49,82,22,189,853
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_05,MIDDAY_SCHOOL,North Quincy,place-nqncy,6029,20912,49,123,427,1390,848
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_03,Sunday,time_period_11,OFF_PEAK,Community College,place-ccmnl,10446,3835,13,804,295,11366,651
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_05,MIDDAY_SCHOOL,Porter,place-portr,2398,33077,49,49,675,1620,919
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_04,MIDDAY_BASE,Braintree,place-brntn,19649,0,49,401,0,401,724
+Heavy Rail,Fall 2024,Blue,Blue Line,EB,day_type_01,Weekday,time_period_05,MIDDAY_SCHOOL,Aquarium,place-aqucl,43431,19039,75,579,254,4884,50
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_03,Sunday,time_period_11,OFF_PEAK,Wollaston,place-wlsta,6562,1820,7,937,260,4043,1033
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_05,MIDDAY_SCHOOL,South Station,place-sstat,39931,91088,49,815,1859,4208,1105
+Heavy Rail,Fall 2024,Blue,Blue Line,EB,day_type_03,Sunday,time_period_11,OFF_PEAK,Airport,place-aport,24135,51735,16,1508,3233,9649,71
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_01,VERY_EARLY_MORNING,Forest Hills,place-forhl,0,2264,60,0,38,0,590
+Heavy Rail,Fall 2024,Blue,Blue Line,WB,day_type_01,Weekday,time_period_09,NIGHT,Airport,place-aport,4627,1134,75,62,15,129,129
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_08,LATE_EVENING,Kendall/MIT,place-knncl,4686,10213,49,96,208,1273,876
+Heavy Rail,Fall 2024,Blue,Blue Line,WB,day_type_03,Sunday,time_period_11,OFF_PEAK,State,place-state,3608,95092,16,226,5943,8753,261
+Heavy Rail,Fall 2024,Blue,Blue Line,WB,day_type_01,Weekday,time_period_03,AM_PEAK,Beachmont,place-bmmnl,53182,2263,75,709,30,2851,159
+Heavy Rail,Fall 2024,Blue,Blue Line,EB,day_type_01,Weekday,time_period_05,MIDDAY_SCHOOL,Wonderland,place-wondl,0,62944,75,0,839,0,209
+Heavy Rail,Fall 2024,Blue,Blue Line,WB,day_type_01,Weekday,time_period_07,EVENING,Suffolk Downs,place-sdmnl,2379,752,75,32,10,703,114
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_09,NIGHT,Shawmut,place-smmnl,236,69,49,5,1,49,905
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_02,EARLY_AM,Park Street,place-pktrm,19902,22703,49,406,463,1982,491
+Heavy Rail,Fall 2024,Blue,Blue Line,EB,day_type_01,Weekday,time_period_09,NIGHT,State,place-state,16783,316,75,224,4,647,55
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_03,Sunday,time_period_11,OFF_PEAK,Green Street,place-grnst,12765,1046,13,982,80,4762,571
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_02,Saturday,time_period_10,OFF_PEAK,Stony Brook,place-sbmnl,17875,1802,13,1375,139,7667,561
+Heavy Rail,Fall 2024,Blue,Blue Line,EB,day_type_01,Weekday,time_period_09,NIGHT,Wonderland,place-wondl,0,8917,75,0,119,0,57
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_09,NIGHT,Ruggles,place-rugg,1476,2536,60,25,42,248,621
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_08,LATE_EVENING,Wellington,place-welln,1052,18458,60,18,308,975,524
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_05,MIDDAY_SCHOOL,Downtown Crossing,place-dwnxg,82989,78006,60,1383,1300,4943,399
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_01,VERY_EARLY_MORNING,Savin Hill,place-shmnl,129,110,49,3,2,30,1165
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_07,EVENING,Central,place-cntsq,43046,21395,49,878,437,3031,1134
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_02,Saturday,time_period_10,OFF_PEAK,Forest Hills,place-forhl,67605,0,13,5200,0,5200,550
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_03,AM_PEAK,South Station,place-sstat,85764,87677,49,1750,1789,7300,719
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_07,EVENING,Wellington,place-welln,16917,1105,60,282,18,886,433
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_03,Sunday,time_period_11,OFF_PEAK,Park Street,place-pktrm,48366,54058,7,6909,7723,14616,1081
+Heavy Rail,Fall 2024,Blue,Blue Line,WB,day_type_01,Weekday,time_period_03,AM_PEAK,Airport,place-aport,86010,14845,75,1147,198,5190,157
+Heavy Rail,Fall 2024,Blue,Blue Line,WB,day_type_01,Weekday,time_period_07,EVENING,Maverick,place-mvbcl,43052,21031,75,574,280,1738,110
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_02,EARLY_AM,Quincy Center,place-qnctr,394,3554,49,8,73,82,1186
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_02,EARLY_AM,Savin Hill,place-shmnl,4616,282,49,94,6,909,495
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_04,MIDDAY_BASE,Green Street,place-grnst,29633,2002,60,494,33,2667,381
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_06,PM_PEAK,Charles/MGH,place-chmnl,53467,23952,49,1091,489,7399,949
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_04,MIDDAY_BASE,Jackson Square,place-jaksn,62172,6308,60,1036,105,4167,383
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_03,Sunday,time_period_11,OFF_PEAK,Roxbury Crossing,place-rcmnl,4644,14179,13,357,1091,7020,661
+Heavy Rail,Fall 2024,Blue,Blue Line,WB,day_type_01,Weekday,time_period_07,EVENING,Bowdoin,place-bomnl,0,9257,75,0,123,0,108
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_09,NIGHT,South Station,place-sstat,3921,4078,49,80,83,391,1010
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_03,AM_PEAK,Ruggles,place-rugg,6979,52989,60,116,883,1028,689
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_04,MIDDAY_BASE,Oak Grove,place-ogmnl,47377,0,60,790,0,790,757
+Heavy Rail,Fall 2024,Blue,Blue Line,EB,day_type_03,Sunday,time_period_11,OFF_PEAK,Wood Island,place-wimnl,2316,17324,16,145,1083,8244,82
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_01,VERY_EARLY_MORNING,Roxbury Crossing,place-rcmnl,1855,1396,60,31,23,385,278
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_03,Sunday,time_period_11,OFF_PEAK,North Quincy,place-nqncy,8645,2350,7,1235,336,4942,1019
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_03,AM_PEAK,Jackson Square,place-jaksn,54944,3068,60,916,51,4460,363
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_09,NIGHT,Ashmont,place-asmnl,0,4615,49,0,94,0,992
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_02,Saturday,time_period_10,OFF_PEAK,JFK/UMass,place-jfk,9680,22566,10,968,2257,11748,1056
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_02,Saturday,time_period_10,OFF_PEAK,Sullivan Square,place-sull,7291,35232,13,561,2710,11995,562
+Heavy Rail,Fall 2024,Blue,Blue Line,WB,day_type_01,Weekday,time_period_02,EARLY_AM,Wood Island,place-wimnl,12290,1171,75,164,16,1687,156
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_08,LATE_EVENING,Kendall/MIT,place-knncl,10677,3151,49,218,64,1171,978
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_06,PM_PEAK,Wellington,place-welln,2779,82810,60,46,1380,4204,334
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_01,VERY_EARLY_MORNING,JFK/UMass,place-jfk,3260,2869,49,67,59,867,466
+Heavy Rail,Fall 2024,Blue,Blue Line,WB,day_type_01,Weekday,time_period_04,MIDDAY_BASE,Orient Heights,place-orhte,67535,5878,75,900,78,3509,175
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_09,NIGHT,Alewife,place-alfcl,0,4235,49,0,86,0,886
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_02,Saturday,time_period_10,OFF_PEAK,Haymarket,place-haecl,36715,22572,13,2824,1736,17732,635
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_09,NIGHT,Fields Corner,place-fldcr,166,4930,49,3,101,121,999
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_02,Saturday,time_period_10,OFF_PEAK,Malden Center,place-mlmnl,58095,1022,13,4469,79,6717,637
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_07,EVENING,Downtown Crossing,place-dwnxg,66555,47789,49,1358,975,5084,1137
+Heavy Rail,Fall 2024,Blue,Blue Line,WB,day_type_01,Weekday,time_period_06,PM_PEAK,Suffolk Downs,place-sdmnl,5693,775,75,76,10,1214,102
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_02,Saturday,time_period_10,OFF_PEAK,Harvard,place-harsq,90197,21081,10,9020,2108,17340,1055
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_02,Saturday,time_period_10,OFF_PEAK,North Quincy,place-nqncy,15499,4121,10,1550,412,6790,927
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_02,Saturday,time_period_10,OFF_PEAK,Downtown Crossing,place-dwnxg,67055,61038,10,6706,6104,21943,918
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_06,PM_PEAK,North Quincy,place-nqncy,17044,5060,49,348,103,1253,971
+Heavy Rail,Fall 2024,Blue,Blue Line,EB,day_type_01,Weekday,time_period_04,MIDDAY_BASE,State,place-state,112808,4899,75,1504,65,3386,45
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_07,EVENING,Stony Brook,place-sbmnl,1046,33499,60,17,558,1804,430
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_04,MIDDAY_BASE,JFK/UMass,place-jfk,50762,36435,49,1036,744,6084,732
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_03,AM_PEAK,JFK/UMass,place-jfk,9187,28521,49,187,582,917,802
+Heavy Rail,Fall 2024,Blue,Blue Line,EB,day_type_01,Weekday,time_period_07,EVENING,Wood Island,place-wimnl,2510,23987,74,34,324,2800,234
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_05,MIDDAY_SCHOOL,Fields Corner,place-fldcr,25261,7725,49,516,158,1461,854
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_01,VERY_EARLY_MORNING,Charles/MGH,place-chmnl,546,3061,49,11,62,167,1153
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_02,EARLY_AM,Assembly,place-astao,4119,1306,60,69,22,1269,606
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_03,AM_PEAK,Savin Hill,place-shmnl,21432,2649,49,437,54,2978,717
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_06,PM_PEAK,Tufts Medical Center,place-tumnl,57149,15214,60,952,254,6819,333
+Heavy Rail,Fall 2024,Blue,Blue Line,EB,day_type_01,Weekday,time_period_09,NIGHT,Maverick,place-mvbcl,2880,20317,75,38,271,569,52
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_03,AM_PEAK,Andrew,place-andrw,3026,6717,49,62,137,1324,1192
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_07,EVENING,Broadway,place-brdwy,9989,23073,49,204,471,4685,1133
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_04,MIDDAY_BASE,Davis,place-davis,2782,32322,49,57,660,784,728
+Heavy Rail,Fall 2024,Blue,Blue Line,EB,day_type_01,Weekday,time_period_07,EVENING,Suffolk Downs,place-sdmnl,467,9711,75,6,129,2231,232
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_08,LATE_EVENING,Tufts Medical Center,place-tumnl,4597,5142,60,77,86,1216,452
+Heavy Rail,Fall 2024,Blue,Blue Line,EB,day_type_01,Weekday,time_period_06,PM_PEAK,Airport,place-aport,30242,85269,75,403,1137,5071,211
+Heavy Rail,Fall 2024,Blue,Blue Line,WB,day_type_02,Saturday,time_period_10,OFF_PEAK,Airport,place-aport,81409,17676,16,5088,1105,15569,141
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_05,MIDDAY_SCHOOL,Assembly,place-astao,7022,31839,60,117,531,2362,395
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_05,MIDDAY_SCHOOL,Stony Brook,place-sbmnl,1066,21132,60,18,352,1585,781
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_06,PM_PEAK,Oak Grove,place-ogmnl,24637,0,60,411,0,411,797
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_06,PM_PEAK,Davis,place-davis,33502,5046,49,684,103,1609,1114
+Heavy Rail,Fall 2024,Blue,Blue Line,EB,day_type_01,Weekday,time_period_05,MIDDAY_SCHOOL,Wood Island,place-wimnl,3656,21755,74,49,294,2471,210
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_05,MIDDAY_SCHOOL,Quincy Center,place-qnctr,23602,1305,49,482,27,779,924
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_05,MIDDAY_SCHOOL,Andrew,place-andrw,21115,6102,49,431,125,3801,744
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_05,MIDDAY_SCHOOL,Oak Grove,place-ogmnl,0,35983,60,0,600,0,307
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_08,LATE_EVENING,Massachusetts Avenue,place-masta,7976,2197,60,133,37,581,515
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_06,PM_PEAK,Forest Hills,place-forhl,0,120465,60,0,2008,0,790
+Heavy Rail,Fall 2024,Blue,Blue Line,WB,day_type_01,Weekday,time_period_06,PM_PEAK,Orient Heights,place-orhte,30659,5211,75,409,69,1552,199
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_02,Saturday,time_period_10,OFF_PEAK,Central,place-cntsq,26125,55259,10,2612,5526,19351,912
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_02,EARLY_AM,Forest Hills,place-forhl,46805,0,60,780,0,780,290
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_01,VERY_EARLY_MORNING,Andrew,place-andrw,503,1215,49,10,25,102,1037
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_04,MIDDAY_BASE,Chinatown,place-chncl,28814,25689,60,480,428,5551,377
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_03,Sunday,time_period_11,OFF_PEAK,Andrew,place-andrw,10565,4031,7,1509,576,11740,951
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_06,PM_PEAK,Quincy Adams,place-qamnl,9964,321,49,203,7,452,980
+Heavy Rail,Fall 2024,Blue,Blue Line,EB,day_type_01,Weekday,time_period_06,PM_PEAK,State,place-state,222184,5734,75,2962,76,7008,219
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_09,NIGHT,Assembly,place-astao,1038,130,60,17,2,53,454
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_02,Saturday,time_period_10,OFF_PEAK,Community College,place-ccmnl,14486,4812,13,1114,370,15256,631
+Heavy Rail,Fall 2024,Blue,Blue Line,WB,day_type_01,Weekday,time_period_03,AM_PEAK,Revere Beach,place-rbmnl,46740,596,75,623,8,2156,164
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_04,MIDDAY_BASE,Broadway,place-brdwy,8390,21245,49,171,434,3475,817
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_03,AM_PEAK,Central,place-cntsq,59695,27118,49,1218,553,5515,1196
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_09,NIGHT,Downtown Crossing,place-dwnxg,5312,2875,60,89,48,285,529
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_07,EVENING,South Station,place-sstat,46089,59107,49,941,1206,4892,1149
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_06,PM_PEAK,Porter,place-portr,27598,5647,49,563,115,2037,1122
+Heavy Rail,Fall 2024,Blue,Blue Line,WB,day_type_01,Weekday,time_period_02,EARLY_AM,Beachmont,place-bmmnl,19287,615,75,257,8,1126,97
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_03,AM_PEAK,North Quincy,place-nqncy,2396,8521,49,49,174,387,804
+Heavy Rail,Fall 2024,Blue,Blue Line,EB,day_type_01,Weekday,time_period_03,AM_PEAK,Revere Beach,place-rbmnl,394,8851,75,5,118,147,32
+Heavy Rail,Fall 2024,Blue,Blue Line,EB,day_type_01,Weekday,time_period_08,LATE_EVENING,Wonderland,place-wondl,0,32601,75,0,435,0,245
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_06,PM_PEAK,Savin Hill,place-shmnl,8184,2812,49,167,57,1231,1024
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_05,MIDDAY_SCHOOL,State,place-state,39111,84264,60,652,1404,4144,310
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_04,MIDDAY_BASE,South Station,place-sstat,33992,117280,49,694,2393,3762,833
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_01,VERY_EARLY_MORNING,Downtown Crossing,place-dwnxg,2959,9678,60,49,161,506,589
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_02,EARLY_AM,Massachusetts Avenue,place-masta,4072,3971,60,68,66,1044,295
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_08,LATE_EVENING,Green Street,place-grnst,195,9784,60,3,163,495,440
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_07,EVENING,Massachusetts Avenue,place-masta,18131,21632,60,302,361,3188,424
+Heavy Rail,Fall 2024,Blue,Blue Line,WB,day_type_01,Weekday,time_period_01,VERY_EARLY_MORNING,Orient Heights,place-orhte,19486,418,75,260,6,947,89
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_01,VERY_EARLY_MORNING,Malden Center,place-mlmnl,17328,112,60,289,2,393,594
+Heavy Rail,Fall 2024,Blue,Blue Line,WB,day_type_01,Weekday,time_period_06,PM_PEAK,Airport,place-aport,63646,13466,75,849,180,2459,193
+Heavy Rail,Fall 2024,Blue,Blue Line,EB,day_type_01,Weekday,time_period_08,LATE_EVENING,Orient Heights,place-orhte,1823,38888,75,24,519,1407,241
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_03,Sunday,time_period_11,OFF_PEAK,Jackson Square,place-jaksn,24130,2519,13,1856,194,7416,573
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_03,Sunday,time_period_11,OFF_PEAK,North Quincy,place-nqncy,2053,8752,7,293,1250,3636,1080
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_02,EARLY_AM,Chinatown,place-chncl,1963,2291,60,33,38,878,287
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_06,PM_PEAK,Roxbury Crossing,place-rcmnl,27621,7056,60,460,118,2606,328
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_02,EARLY_AM,Charles/MGH,place-chmnl,1794,43780,49,37,893,1053,483
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_02,Saturday,time_period_10,OFF_PEAK,Stony Brook,place-sbmnl,1225,20910,13,94,1608,5639,644
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_01,VERY_EARLY_MORNING,Back Bay,place-bbsta,396,6593,60,7,110,214,586
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_04,MIDDAY_BASE,Wollaston,place-wlsta,4744,11759,49,97,240,1027,834
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_05,MIDDAY_SCHOOL,Assembly,place-astao,32328,6178,60,539,103,2051,765
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_01,VERY_EARLY_MORNING,Ruggles,place-rugg,540,4426,60,9,74,107,599
+Heavy Rail,Fall 2024,Blue,Blue Line,EB,day_type_01,Weekday,time_period_01,VERY_EARLY_MORNING,Wonderland,place-wondl,0,1785,75,0,24,0,11
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_01,VERY_EARLY_MORNING,Davis,place-davis,142,721,49,3,15,32,462
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_04,MIDDAY_BASE,Community College,place-ccmnl,11161,48960,60,186,816,2777,378
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_09,NIGHT,Davis,place-davis,873,81,49,18,2,36,997
+Heavy Rail,Fall 2024,Blue,Blue Line,EB,day_type_02,Saturday,time_period_10,OFF_PEAK,Aquarium,place-aqucl,51294,19206,16,3206,1200,20256,60
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_09,NIGHT,Quincy Center,place-qnctr,90,2518,49,2,51,70,1007
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_02,EARLY_AM,Jackson Square,place-jaksn,15680,749,60,261,12,1041,293
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_04,MIDDAY_BASE,Park Street,place-pktrm,97004,103312,49,1980,2108,5363,827
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_07,EVENING,Jackson Square,place-jaksn,3451,38553,60,58,643,2329,421
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_02,Saturday,time_period_10,OFF_PEAK,Broadway,place-brdwy,18864,6960,10,1886,696,16895,911
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_01,VERY_EARLY_MORNING,Shawmut,place-smmnl,69,152,49,1,3,17,1166
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_09,NIGHT,Braintree,place-brntn,488,0,49,10,0,10,889
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_01,VERY_EARLY_MORNING,Green Street,place-grnst,2173,84,60,36,1,298,271
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_05,MIDDAY_SCHOOL,Braintree,place-brntn,0,15902,49,0,325,0,838
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_03,Sunday,time_period_11,OFF_PEAK,Chinatown,place-chncl,23519,14706,13,1809,1131,13491,567
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_06,PM_PEAK,Ruggles,place-rugg,98968,18696,60,1649,312,3963,329
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_04,MIDDAY_BASE,Massachusetts Avenue,place-masta,12630,31264,60,210,521,3070,755
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_06,PM_PEAK,Savin Hill,place-shmnl,2541,24967,49,52,510,2498,1125
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_07,EVENING,North Station,place-north,40640,32942,60,677,549,2178,425
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_09,NIGHT,North Quincy,place-nqncy,321,2258,49,7,46,137,1003
+Heavy Rail,Fall 2024,Red,Red Line,SB,day_type_01,Weekday,time_period_08,LATE_EVENING,Harvard,place-harsq,22988,2071,49,469,42,790,972
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_05,MIDDAY_SCHOOL,Ruggles,place-rugg,81210,19382,60,1353,323,3767,309
+Heavy Rail,Fall 2024,Red,Red Line,NB,day_type_01,Weekday,time_period_02,EARLY_AM,Fields Corner,place-fldcr,13206,1039,49,270,21,908,486
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_02,EARLY_AM,Jackson Square,place-jaksn,1732,3078,60,29,51,197,622
+Heavy Rail,Fall 2024,Orange,Orange Line,NB,day_type_01,Weekday,time_period_09,NIGHT,Malden Center,place-mlmnl,93,8949,60,2,149,81,534
+Heavy Rail,Fall 2024,Orange,Orange Line,SB,day_type_01,Weekday,time_period_04,MIDDAY_BASE,Jackson Square,place-jaksn,6279,31026,60,105,517,1532,753
