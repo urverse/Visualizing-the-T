@@ -1,0 +1,15 @@
+generation_date: '2025-11-18T18:35:02.885946'
+travel_reliability:
+  n_segments: 1850
+  median_buffer_index: 0.21563232678470368
+  mean_otp: 0.7549638360836354
+  median_volatility: 0.24166399573766195
+restrictions:
+  n_lines: 4
+  total_restrictions: 265
+  avg_severity: 1.0
+  total_miles_restricted: 4117.755643939392
+  avg_pct_line_restricted: 0.005166037103923175
+ridership:
+  total_daily_riders: 732190.7102328623
+  n_line_periods: 30
