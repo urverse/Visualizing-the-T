@@ -82,3 +82,6 @@ logs/
 *.tmp
 temp/
 tmp/
+
+# But keep the indicator files for deployment
+!data/indicators/*.parquet
