@@ -24,3 +24,6 @@ pyyaml>=6.0.0
 # Notebook
 jupyter>=1.0.0
 ipykernel>=6.27.0
+
+streamlit==1.28.0
+pyarrow==14.0.0
