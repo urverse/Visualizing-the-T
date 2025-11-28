@@ -1,0 +1,6 @@
+Component,Equal_Weight,Literature_Weight,Rationale
+travel_time,0.2,0.15,Moderate - absolute travel time matters less than reliability
+volatility,0.2,0.25,High - unpredictability frustrates riders most
+buffer_time,0.2,0.25,High - riders need to plan around delays
+on_time_performance,0.2,0.25,High - meeting expectations is critical
+restrictions,0.2,0.1,Low - indirect impact on rider experience
