@@ -26,4 +26,6 @@ jupyter>=1.0.0
 ipykernel>=6.27.0
 
 streamlit==1.28.0
-pyarrow
+pyarrow>=16
+plotly>=5.0.0
+
