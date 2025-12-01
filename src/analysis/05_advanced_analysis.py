@@ -51,6 +51,17 @@ station_indicators = travel_indicators.groupby(['route_id', 'from_stop_id']).agg
     'n_observations': 'sum'
 }).reset_index()
 
+# add restriction data by route
+restriction_indicators['route_id'] = restriction_indicators['line'].str.replace(' Line', '')
+station_indicators = station_indicators.merge(
+    restriction_indicators[['route_id', 'total_miles_restricted']],
+    on='route_id',
+    how='left'
+)
+
+# fill missing restriction data with 0
+station_indicators['total_miles_restricted'] = station_indicators['total_miles_restricted'].fillna(0)
+
 print(f"\n=== STATION-LEVEL INDICATORS ===")
 print(f"Total stations analyzed: {len(station_indicators)}")
 print(f"\nSample:")
@@ -60,12 +71,14 @@ print(station_indicators.head(10))
 from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
 
-indicators_to_scale = ['median_travel_time', 'travel_time_volatility', 'buffer_time_index', 'on_time_performance']
+indicators_to_scale = ['median_travel_time', 'travel_time_volatility', 'buffer_time_index', 
+                       'on_time_performance', 'total_miles_restricted']
 station_indicators[indicators_to_scale] = scaler.fit_transform(station_indicators[indicators_to_scale])
 
 # compute station-level RSS (using same weights)
 weights_lit = {'median_travel_time': -0.15, 'travel_time_volatility': -0.25,
-               'buffer_time_index': -0.25, 'on_time_performance': 0.25}
+               'buffer_time_index': -0.25, 'on_time_performance': 0.25,
+               'total_miles_restricted': -0.10}
 
 station_indicators['station_rss'] = sum(
     weights_lit[col] * station_indicators[col] for col in weights_lit.keys()
@@ -158,12 +171,14 @@ def bootstrap_rss(data, n_bootstrap=1000):
         # normalize
         scaler = StandardScaler()
         sample_norm = sample.copy()
-        indicators = ['median_travel_time', 'travel_time_volatility', 'buffer_time_index', 'on_time_performance']
+        indicators = ['median_travel_time', 'travel_time_volatility', 'buffer_time_index', 
+              'on_time_performance', 'total_miles_restricted']
         sample_norm[indicators] = scaler.fit_transform(sample[indicators])
 
         # compute RSS
-        weights = {'median_travel_time': -0.15, 'travel_time_volatility': -0.25,
-                   'buffer_time_index': -0.25, 'on_time_performance': 0.25}
+       weights = {'median_travel_time': -0.15, 'travel_time_volatility': -0.25,
+           'buffer_time_index': -0.25, 'on_time_performance': 0.25,
+           'total_miles_restricted': -0.10}
         sample_norm['rss'] = sum(weights[col] * sample_norm[col] for col in weights.keys())
 
         # scale to 60-100
@@ -270,7 +285,8 @@ print("="*70)
 # features: normalized indicators
 
 X = station_indicators[['median_travel_time', 'travel_time_volatility',
-                        'buffer_time_index', 'on_time_performance']].copy()
+                        'buffer_time_index', 'on_time_performance',
+                        'total_miles_restricted']].copy()
 y = station_indicators['station_rss_scaled'].copy()
 
 print(f"\n=== DATA PREPARATION ===")
@@ -312,8 +328,8 @@ print(f"\nIntercept: {ridge_model.intercept_:.4f}")
 # compare with literature weights
 lit_weights = pd.DataFrame({
     'Feature': ['travel_time_volatility', 'buffer_time_index',
-                'on_time_performance', 'median_travel_time'],
-    'Literature_Weight': [-0.25, -0.25, 0.25, -0.15]
+                'on_time_performance', 'median_travel_time', 'total_miles_restricted'],
+    'Literature_Weight': [-0.25, -0.25, 0.25, -0.15, -0.10]
 })
 
 weight_comparison = learned_weights.merge(lit_weights, on='Feature')
