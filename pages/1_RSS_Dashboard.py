@@ -13,8 +13,8 @@ if data is None:
     st.error("Failed to load data.")
     st.stop()
 
-rss_results = data['rss_results']
-confidence_intervals = data.get('confidence_intervals')
+rss_results = data['rss_final_results']
+confidence_intervals = data.get('bootstrap_confidence_intervals')
 learned_weights = data.get('learned_weights')
 regression_results = data.get('regression_model_results')
 
