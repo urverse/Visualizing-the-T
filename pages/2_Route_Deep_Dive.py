@@ -192,48 +192,95 @@ if not route_cts.empty:
 
 st.divider()
 
+# TEMPORARY DEBUG - Remove after fixing
+with st.expander("🔧 Debug: Check OD Data"):
+    try:
+        od_data = get_od_data(travel_times, selected_route)
+        st.write(f"OD Data type: {type(od_data)}")
+        st.write(f"OD Data shape: {od_data.shape if hasattr(od_data, 'shape') else 'N/A'}")
+        st.write(f"OD Data empty: {od_data.empty if hasattr(od_data, 'empty') else 'N/A'}")
+        if od_data is not None and hasattr(od_data, 'head'):
+            st.write("First 5 rows:")
+            st.dataframe(od_data.head())
+    except Exception as e:
+        st.error(f"Error getting OD data: {str(e)}")
+
 # === Sankey Diagram ===
 st.markdown("### 🔀 Origin-Destination Flow (Sankey Diagram)")
 st.write("Visualizing the flow of trips between stations.")
 
-od_data = get_od_data(travel_times, selected_route)
-
-if not od_data.empty:
-    # Filter top N flows for readability
-    top_n = st.slider("Number of Top Flows to Display", 5, 50, 15, help="More flows = more complex diagram")
-    top_od = od_data.head(top_n)
+try:
+    od_data = get_od_data(travel_times, selected_route)
     
-    # Create nodes
-    all_nodes = list(set(top_od['from_parent_station'].tolist() + top_od['to_parent_station'].tolist()))
-    node_map = {node: i for i, node in enumerate(all_nodes)}
-    
-    # Create parent_id to name mapping
-    parent_map_df = data['travel_times'][['from_parent_station', 'from_stop_name']].drop_duplicates()
-    parent_to_name = parent_map_df.groupby('from_parent_station')['from_stop_name'].first().to_dict()
-    
-    node_labels = [parent_to_name.get(n, n) for n in all_nodes]
-    
-    fig = go.Figure(data=[go.Sankey(
-        node = dict(
-          pad = 15,
-          thickness = 20,
-          line = dict(color = "black", width = 0.5),
-          label = node_labels,
-          color = "blue"
-        ),
-        link = dict(
-          source = [node_map[src] for src in top_od['from_parent_station']],
-          target = [node_map[tgt] for tgt in top_od['to_parent_station']],
-          value = top_od['trip_count']
-        ))])
-    
-    fig.update_layout(title_text=f"Top {top_n} OD Flows ({selected_route} Line)", font_size=10, height=600)
-    st.plotly_chart(fig, use_container_width=True)
-    st.caption("**Thicker flows** indicate more trips between station pairs. Identifies key transfer points and travel patterns.")
-else:
-    st.info("No origin-destination data available for this route.")
-
-st.divider()
+    if od_data is not None and not od_data.empty and len(od_data) > 0:
+        # Filter top N flows for readability
+        top_n = st.slider("Number of Top Flows to Display", 5, 50, 15, help="More flows = more complex diagram")
+        top_od = od_data.head(top_n)
+        
+        # Validate we have enough data
+        if len(top_od) < 2:
+            st.warning("Not enough origin-destination pairs to create a flow diagram.")
+        else:
+            # Create nodes
+            all_nodes = list(set(top_od['from_parent_station'].tolist() + top_od['to_parent_station'].tolist()))
+            
+            if len(all_nodes) < 2:
+                st.warning("Insufficient unique stations for flow visualization.")
+            else:
+                node_map = {node: i for i, node in enumerate(all_nodes)}
+                
+                # Create parent_id to name mapping
+                parent_map_df = data['travel_times'][['from_parent_station', 'from_stop_name']].drop_duplicates()
+                parent_to_name = parent_map_df.groupby('from_parent_station')['from_stop_name'].first().to_dict()
+                
+                node_labels = [parent_to_name.get(n, n) for n in all_nodes]
+                
+                # Create Sankey diagram
+                try:
+                    fig = go.Figure(data=[go.Sankey(
+                        node = dict(
+                          pad = 15,
+                          thickness = 20,
+                          line = dict(color = "black", width = 0.5),
+                          label = node_labels,
+                          color = "blue"
+                        ),
+                        link = dict(
+                          source = [node_map[src] for src in top_od['from_parent_station']],
+                          target = [node_map[tgt] for tgt in top_od['to_parent_station']],
+                          value = top_od['trip_count'].tolist()
+                        ))])
+                    
+                    fig.update_layout(
+                        title_text=f"Top {top_n} OD Flows ({selected_route} Line)", 
+                        font_size=10, 
+                        height=600
+                    )
+                    st.plotly_chart(fig, use_container_width=True)
+                    st.caption("**Thicker flows** indicate more trips between station pairs. Identifies key transfer points and travel patterns.")
+                    
+                except Exception as e:
+                    st.error(f"Error creating Sankey diagram: {str(e)}")
+                    st.info("Showing OD data in table format instead:")
+                    st.dataframe(
+                        top_od[['from_parent_station', 'to_parent_station', 'trip_count']]
+                        .rename(columns={
+                            'from_parent_station': 'Origin',
+                            'to_parent_station': 'Destination', 
+                            'trip_count': 'Trip Count'
+                        })
+                        .style.format({'Trip Count': '{:,}'}),
+                        use_container_width=True
+                    )
+    else:
+        st.info("No origin-destination flow data available for this route.")
+        st.markdown("**Possible reasons:**")
+        st.markdown("- Sample data may not include detailed trip-level information")
+        st.markdown("- This route may not have sufficient trip records in the dataset")
+        
+except Exception as e:
+    st.warning(f"Could not load OD flow data: {str(e)}")
+    st.info("This feature requires detailed trip-level data which may not be available in the current dataset.")
 
 # === Busiest Trip Path ===
 st.markdown("### 🚦 Busiest Trip Path")
