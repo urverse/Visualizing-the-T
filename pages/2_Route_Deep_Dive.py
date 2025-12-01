@@ -192,19 +192,6 @@ if not route_cts.empty:
 
 st.divider()
 
-# TEMPORARY DEBUG - Remove after fixing
-with st.expander("🔧 Debug: Check OD Data"):
-    try:
-        od_data = get_od_data(travel_times, selected_route)
-        st.write(f"OD Data type: {type(od_data)}")
-        st.write(f"OD Data shape: {od_data.shape if hasattr(od_data, 'shape') else 'N/A'}")
-        st.write(f"OD Data empty: {od_data.empty if hasattr(od_data, 'empty') else 'N/A'}")
-        if od_data is not None and hasattr(od_data, 'head'):
-            st.write("First 5 rows:")
-            st.dataframe(od_data.head())
-    except Exception as e:
-        st.error(f"Error getting OD data: {str(e)}")
-
 # === Sankey Diagram ===
 st.markdown("### 🔀 Origin-Destination Flow (Sankey Diagram)")
 st.write("Visualizing the flow of trips between stations.")
