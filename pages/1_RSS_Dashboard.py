@@ -16,7 +16,7 @@ if data is None:
 rss_results = data['rss_results']
 confidence_intervals = data.get('confidence_intervals')
 learned_weights = data.get('learned_weights')
-regression_results = data.get('regression_results')
+regression_results = data.get('regression_model_results')
 
 # Add explanation at the top
 st.info("""
