@@ -255,7 +255,7 @@ plt.show()
 print("✅ Visualizations complete")
 
 # save RSS results
-rss_data_normalized.to_csv('rss_final_results.csv', index=False)
+rss_data_normalized.to_csv('data/processed/rss_final_results.csv', index=False)
 
 # save weights for documentation
 weights_df = pd.DataFrame({
@@ -270,7 +270,7 @@ weights_df = pd.DataFrame({
         'Low - indirect impact on rider experience'
     ]
 })
-weights_df.to_csv('rss_weights.csv', index=False)
+weights_df.to_csv('data/processed/rss_weights.csv', index=False)
 
 print("="*70)
 print("RSS CALCULATION COMPLETE - WEEK 2 DELIVERABLE")
@@ -312,4 +312,3 @@ print("  4. Interactive dashboard")
 print("  5. Hypothesis testing (route comparisons)")
 
 print("="*70)
-
