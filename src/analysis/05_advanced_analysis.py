@@ -51,17 +51,6 @@ station_indicators = travel_indicators.groupby(['route_id', 'from_stop_id']).agg
     'n_observations': 'sum'
 }).reset_index()
 
-# add restriction data by route
-restriction_indicators['route_id'] = restriction_indicators['line'].str.replace(' Line', '')
-station_indicators = station_indicators.merge(
-    restriction_indicators[['route_id', 'total_miles_restricted']],
-    on='route_id',
-    how='left'
-)
-
-# fill missing restriction data with 0
-station_indicators['total_miles_restricted'] = station_indicators['total_miles_restricted'].fillna(0)
-
 print(f"\n=== STATION-LEVEL INDICATORS ===")
 print(f"Total stations analyzed: {len(station_indicators)}")
 print(f"\nSample:")
@@ -71,14 +60,12 @@ print(station_indicators.head(10))
 from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
 
-indicators_to_scale = ['median_travel_time', 'travel_time_volatility', 'buffer_time_index', 
-                       'on_time_performance', 'total_miles_restricted']
+indicators_to_scale = ['median_travel_time', 'travel_time_volatility', 'buffer_time_index', 'on_time_performance']
 station_indicators[indicators_to_scale] = scaler.fit_transform(station_indicators[indicators_to_scale])
 
 # compute station-level RSS (using same weights)
 weights_lit = {'median_travel_time': -0.15, 'travel_time_volatility': -0.25,
-               'buffer_time_index': -0.25, 'on_time_performance': 0.25,
-               'total_miles_restricted': -0.10}
+               'buffer_time_index': -0.25, 'on_time_performance': 0.25}
 
 station_indicators['station_rss'] = sum(
     weights_lit[col] * station_indicators[col] for col in weights_lit.keys()
@@ -152,7 +139,7 @@ plt.show()
 print("✅ Station performance summary complete")
 
 # save station results
-station_indicators.to_csv('station_rss_scores.csv', index=False)
+station_indicators.to_csv('data/processed/station_rss_scores.csv', index=False)
 print("✅ Saved: station_rss_scores.csv")
 
 print("="*70)
@@ -160,8 +147,7 @@ print("BOOTSTRAP CONFIDENCE INTERVALS - RESAMPLING")
 print("="*70)
 
 # bootstrap function
-def bootstrap_rss(data, n_bootstrap=1000):
-    """Generate bootstrap samples and compute RSS"""
+def bootstrap_rss(data, weights, n_bootstrap=1000):
     bootstrap_scores = []
 
     for i in range(n_bootstrap):
@@ -171,22 +157,20 @@ def bootstrap_rss(data, n_bootstrap=1000):
         # normalize
         scaler = StandardScaler()
         sample_norm = sample.copy()
-        indicators = ['median_travel_time', 'travel_time_volatility', 'buffer_time_index', 
-              'on_time_performance', 'total_miles_restricted']
+        indicators = ['median_travel_time', 'travel_time_volatility', 'buffer_time_index', 'on_time_performance']
         sample_norm[indicators] = scaler.fit_transform(sample[indicators])
 
         # compute RSS
-       weights = {'median_travel_time': -0.15, 'travel_time_volatility': -0.25,
-           'buffer_time_index': -0.25, 'on_time_performance': 0.25,
-           'total_miles_restricted': -0.10}
+        weights = {'median_travel_time': -0.15, 'travel_time_volatility': -0.25,
+                   'buffer_time_index': -0.25, 'on_time_performance': 0.25}
         sample_norm['rss'] = sum(weights[col] * sample_norm[col] for col in weights.keys())
 
         # scale to 60-100
         rss_min = sample_norm['rss'].min()
         rss_max = sample_norm['rss'].max()
         sample_norm['rss_scaled'] = 60 + 40 * (sample_norm['rss'] - rss_min) / (rss_max - rss_min)
-
-        bootstrap_scores.append(sample_norm['rss_scaled'].mean())
+        w = weights.loc[sample_norm.index]
+        bootstrap_scores.append(np.average(sample_norm['rss_scaled'], weights=w))
 
     return np.array(bootstrap_scores)
 
@@ -196,11 +180,25 @@ print("(1000 resamples per route)\n")
 
 ci_results = []
 
-for route in ['Blue', 'Orange', 'Red']:
-    route_data = station_indicators[station_indicators['route_id'] == route]
+travel_times_sample = pd.read_csv('data/processed/travel_times_sample.csv')
+ridership_sample = pd.read_csv('data/processed/ridership_sample.csv')
+mapping = travel_times_sample[['from_stop_id', 'from_stop_name']].drop_duplicates().dropna()
+mapping['from_stop_id'] = mapping['from_stop_id'].astype(str)
+station_indicators['from_stop_id'] = station_indicators['from_stop_id'].astype(str)
+station_indicators = station_indicators.merge(mapping, on='from_stop_id', how='left')
+ridership_weights_df = ridership_sample.groupby(['route_id', 'stop_name'])['average_flow'].sum().reset_index()
+ridership_weights_df.rename(columns={'stop_name': 'from_stop_name', 'average_flow': 'ridership_weight'}, inplace=True)
 
-    # bootstrap
-    bootstrap_samples = bootstrap_rss(route_data, n_bootstrap=1000)
+ci_results = []
+
+for route in ['Blue', 'Orange', 'Red']:
+    route_data = station_indicators[station_indicators['route_id'] == route].copy()
+    route_data = route_data.merge(ridership_weights_df, on=['route_id', 'from_stop_name'], how='left')
+    route_data['ridership_weight'] = route_data['ridership_weight'].fillna(1.0)
+    route_data.reset_index(drop=True, inplace=True)
+    weights_series = route_data['ridership_weight']
+
+    bootstrap_samples = bootstrap_rss(route_data, weights_series, n_bootstrap=1000)
 
     # compute 95% CI
     ci_lower = np.percentile(bootstrap_samples, 2.5)
@@ -269,7 +267,7 @@ print("  → Most variable performance, some stations much worse")
 print("• Red Line: Middle mean (86.53) with moderate CI (12.59)")
 
 # save results
-ci_df.to_csv('bootstrap_confidence_intervals.csv', index=False)
+ci_df.to_csv('data/processed/bootstrap_confidence_intervals.csv', index=False)
 print("\n✅ Saved: bootstrap_confidence_intervals.csv")
 
 from sklearn.linear_model import Ridge, Lasso
@@ -285,8 +283,7 @@ print("="*70)
 # features: normalized indicators
 
 X = station_indicators[['median_travel_time', 'travel_time_volatility',
-                        'buffer_time_index', 'on_time_performance',
-                        'total_miles_restricted']].copy()
+                        'buffer_time_index', 'on_time_performance']].copy()
 y = station_indicators['station_rss_scaled'].copy()
 
 print(f"\n=== DATA PREPARATION ===")
@@ -328,8 +325,8 @@ print(f"\nIntercept: {ridge_model.intercept_:.4f}")
 # compare with literature weights
 lit_weights = pd.DataFrame({
     'Feature': ['travel_time_volatility', 'buffer_time_index',
-                'on_time_performance', 'median_travel_time', 'total_miles_restricted'],
-    'Literature_Weight': [-0.25, -0.25, 0.25, -0.15, -0.10]
+                'on_time_performance', 'median_travel_time'],
+    'Literature_Weight': [-0.25, -0.25, 0.25, -0.15]
 })
 
 weight_comparison = learned_weights.merge(lit_weights, on='Feature')
@@ -388,8 +385,8 @@ model_results = pd.DataFrame({
     'Metric': ['R² Score', 'RMSE', 'CV R² Mean', 'CV R² Std'],
     'Value': [r2, rmse, cv_scores.mean(), cv_scores.std()]
 })
-model_results.to_csv('regression_model_results.csv', index=False)
-learned_weights.to_csv('learned_weights.csv', index=False)
+model_results.to_csv('data/processed/regression_model_results.csv', index=False)
+learned_weights.to_csv('data/processed/learned_weights.csv', index=False)
 
 print("✅ Saved: regression_model_results.csv, learned_weights.csv")
 
@@ -473,4 +470,3 @@ print("  • Bootstrap resampling: Confidence intervals")
 
 print("\n🚀 READY FOR PRESENTATION (DEC 1)")
 print("="*70)
-
